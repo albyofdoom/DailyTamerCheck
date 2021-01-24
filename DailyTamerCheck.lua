@@ -203,30 +203,65 @@ local smv = C_Map.GetMapInfo(539) -- Shadowmoon Valley
 local soa = C_Map.GetMapInfo(542) -- Spires of Arak
 local gor = C_Map.GetMapInfo(543) -- Gorgrond
 local nag = C_Map.GetMapInfo(550) -- Nagrand
-local ash = C_Map.GetMapInfo(588) -- Ashran
 
-local tjf = C_Map.GetMapInfo(371) 	-- The Jade Forest
-local vfw = C_Map.GetMapInfo(376) 	-- Valley of the Four Winds
-local kls = C_Map.GetMapInfo(379) 	-- Kun-Lai Summo
-local tos = C_Map.GetMapInfo(388) 	-- Townlong Steppes
-local veb = C_Map.GetMapInfo(390) 	-- Vale of Eternal Blossoms
-local krw = C_Map.GetMapInfo(418) 	-- Krasarang Wilds
-local dws = C_Map.GetMapInfo(422) 	-- Dread Wastes
-local tvs = C_Map.GetMapInfo(433) 	-- The Veiled Stair
-local iot = C_Map.GetMapInfo(504) 	-- Isle of Thunder
-local iog = C_Map.GetMapInfo(507) 	-- Isle of Giants
-local tti = C_Map.GetMapInfo(554) 	-- Timeless Isle
+local tjf = C_Map.GetMapInfo(371)	-- The Jade Forest
+local vfw = C_Map.GetMapInfo(376)	-- Valley of the Four Winds
+local kls = C_Map.GetMapInfo(379)	-- Kun-Lai Summo
+local tos = C_Map.GetMapInfo(388)	-- Townlong Steppes
+local veb = C_Map.GetMapInfo(390)	-- Vale of Eternal Blossoms
+local krw = C_Map.GetMapInfo(418)	-- Krasarang Wilds
+local dws = C_Map.GetMapInfo(422)	-- Dread Wastes
+local tti = C_Map.GetMapInfo(554)	-- Timeless Isle
 
-local bta = C_Map.GetMapInfo(114) 	-- Borean Tundra
-local dbi = C_Map.GetMapInfo(115) 	-- Dragonblight
-local grz = C_Map.GetMapInfo(116) 	-- Grizzly Hills
-local hfj = C_Map.GetMapInfo(117) 	-- Howling Fjord
-local icc = C_Map.GetMapInfo(118) 	-- Icecrown
-local shb = C_Map.GetMapInfo(119) 	-- Sholazar Basin
-local tsp = C_Map.GetMapInfo(120) 	-- The Storm Peaks
-local zdr = C_Map.GetMapInfo(121) 	-- Zul'Drak
-local wig = C_Map.GetMapInfo(123) 	-- Wintergrasp
-local csf = C_Map.GetMapInfo(127) 	-- Crystalsong Forest
+local dbi = C_Map.GetMapInfo(115)	-- Dragonblight
+local hfj = C_Map.GetMapInfo(117)	-- Howling Fjord
+local icc = C_Map.GetMapInfo(118)	-- Icecrown
+local zdr = C_Map.GetMapInfo(121)	-- Zul'Drak
+local csf = C_Map.GetMapInfo(127)	-- Crystalsong Forest
+
+local hfp = C_Map.GetMapInfo(100)	-- Hellfire Peninsula
+local zng = C_Map.GetMapInfo(102)	-- Zangarmarsh
+local osm = C_Map.GetMapInfo(104)	-- Shadowmoon Valley
+local ona = C_Map.GetMapInfo(107)	-- Nagrand
+local ter = C_Map.GetMapInfo(108)	-- Terokkar Forest
+local sha = C_Map.GetMapInfo(111)	-- Shattrath City
+
+local twh = C_Map.GetMapInfo(241) -- Twilight Highlands
+local uld = C_Map.GetMapInfo(249) -- Uldum
+local hyj = C_Map.GetMapInfo(198) -- Mount Hyjal
+local dee = C_Map.GetMapInfo(207) -- Deepholm
+local tma = C_Map.GetMapInfo(948) -- The Maelstrom
+
+local dur = C_Map.GetMapInfo(1)   -- Durotar
+local mul = C_Map.GetMapInfo(7) 	-- Mulgore
+local nob = C_Map.GetMapInfo(10)  -- Northern Barrens
+local dks = C_Map.GetMapInfo(42) 	-- Darkshore
+local asv = C_Map.GetMapInfo(63)  -- Ashenvale
+local thn = C_Map.GetMapInfo(64)  -- Thousand Needles
+local stm = C_Map.GetMapInfo(65)  -- Stonetalon Mountains
+local des = C_Map.GetMapInfo(66)  -- Desolace
+local fer = C_Map.GetMapInfo(69)  -- Feralas
+local dwm = C_Map.GetMapInfo(70)  -- Dustwallow Marsh
+local tan = C_Map.GetMapInfo(71)  -- Tanaris
+local fel = C_Map.GetMapInfo(77)  -- Felwood
+local moo = C_Map.GetMapInfo(80)  -- Moonglade
+local wsp = C_Map.GetMapInfo(83)  -- Winterspring
+local sob = C_Map.GetMapInfo(199) -- Southern Barrens
+
+local epl = C_Map.GetMapInfo(23)  -- Eastern Plaguelands
+local thl = C_Map.GetMapInfo(26)  -- The Hinterlands
+local seg = C_Map.GetMapInfo(32)  -- Searing Gorge
+local bus = C_Map.GetMapInfo(36)  -- Burning Steppes
+local elf = C_Map.GetMapInfo(37)  -- Elwynn Forest
+local dwp = C_Map.GetMapInfo(42)  -- Deadwind Pass
+local duw = C_Map.GetMapInfo(47)  -- Duskwood
+local rrm = C_Map.GetMapInfo(49)  -- Redridge Mountains
+local nst = C_Map.GetMapInfo(50)  -- Northern Stranglethorn
+local sos = C_Map.GetMapInfo(51)  -- Swamp of Sorrows
+local wef = C_Map.GetMapInfo(52)  -- Westfall
+local cos = C_Map.GetMapInfo(210) -- The Cape of Stranglethorn
+
+local dmi = C_Map.GetMapInfo(407) -- Darkmoon Island
 
 ------- localized zone and npc names from GetAchievementCriteriaInfo --------
  questsdata = {
@@ -254,97 +289,97 @@ local csf = C_Map.GetMapInfo(127) 	-- Crystalsong Forest
     [38300] = {fw.name,"Kura",25,"",{[fw.mapID] = {32.06,43.59},[ffr.mapID] = {46.54,65.36},[dr.mapID] = {33.35,36.83}},fw.mapID,tx_wod_bagicon,"Horde"},
     
      -- Draenor --
-    [37203] = {C_Map.GetMapInfo(smv.mapID).name,"Ashlei"           ,25,pfma..pfma..pfbe,{[smv.mapID] = {50,30},[dr.mapID] = {58.6,65.5}},smv.mapID,tx_wod_bagicon}, -- ashlei
-	  [37205] = {C_Map.GetMapInfo(ffr.mapID).name,"Gargra"           ,25,pfbe..pfbe..pfbe,{[ffr.mapID] = {68.6,64.7},[dr.mapID] = {39.2,36.7}},ffr.mapID,tx_wod_bagicon}, -- gargra
-	  [37206] = {C_Map.GetMapInfo(nag.mapID).name,"Tarr the Terrible",25,pfhu..pfhu..pfhu,{[nag.mapID] = {56.2,9.8},[dr.mapID] = {27,43.8}},nag.mapID,tx_wod_bagicon}, -- tarr
-	  [37208] = {C_Map.GetMapInfo(tal.mapID).name,"Taralune"         ,25,pffl..pffl..pffl,{[tal.mapID] = {49.1,80.4},[dr.mapID] = {41.1,65.7}},tal.mapID,tx_wod_bagicon}, -- taralune
-	  [37201] = {C_Map.GetMapInfo(gor.mapID).name,"Cymre Brighblade" ,25,pfun..pfma..pfme,{[gor.mapID] = {51,71},[dr.mapID] = {50,36}},gor.mapID,tx_wod_bagicon}, -- cymre
-	  [37207] = {C_Map.GetMapInfo(soa.mapID).name,"Vesharr"          ,25,pffl..pfme..pffl,{[soa.mapID] = {46.3,45.3},[dr.mapID] = {45.6,76.8}},soa.mapID,tx_wod_bagicon}, -- vesharr
+    [37203] = {smv.name,"Ashlei"           ,25,pfma..pfma..pfbe,{[smv.mapID] = {50,30},[dr.mapID] = {58.6,65.5}},smv.mapID,tx_wod_bagicon}, -- ashlei
+	  [37205] = {ffr.name,"Gargra"           ,25,pfbe..pfbe..pfbe,{[ffr.mapID] = {68.6,64.7},[dr.mapID] = {39.2,36.7}},ffr.mapID,tx_wod_bagicon}, -- gargra
+	  [37206] = {nag.name,"Tarr the Terrible",25,pfhu..pfhu..pfhu,{[nag.mapID] = {56.2,9.8},[dr.mapID] = {27,43.8}},nag.mapID,tx_wod_bagicon}, -- tarr
+	  [37208] = {tal.name,"Taralune"         ,25,pffl..pffl..pffl,{[tal.mapID] = {49.1,80.4},[dr.mapID] = {41.1,65.7}},tal.mapID,tx_wod_bagicon}, -- taralune
+	  [37201] = {gor.name,"Cymre Brighblade" ,25,pfun..pfma..pfme,{[gor.mapID] = {51,71},[dr.mapID] = {50,36}},gor.mapID,tx_wod_bagicon}, -- cymre
+	  [37207] = {soa.name,"Vesharr"          ,25,pffl..pfme..pffl,{[soa.mapID] = {46.3,45.3},[dr.mapID] = {45.6,76.8}},soa.mapID,tx_wod_bagicon}, -- vesharr
       
     -- Pandaren Spirits --
-    [32434] = {C_Map.GetMapInfo(tos.mapID).name,"|T"..icon_firespirit..":12|t Fire Spirit",25,pfdr..pfel..pffl,{[tos.mapID] = {57,42},[pa.mapID] = {32,36},[kls.mapID] = {16,64}},tos.mapID,icon_firespiro},
-    [32439] = {C_Map.GetMapInfo(dws.mapID).name,"|T"..icon_waterspirit..":12|t Water Spirit",25,pfwa..pfcr..pfel,{[dws.mapID] = {61,88},[pa.mapID] = {38,81}},dws.mapID,icon_waterspiro},
-    [32441] = {C_Map.GetMapInfo(kls.mapID).name,"|T"..icon_earthspirit..":12|t Earth Spirit",25,pfel..pfma..pfbe,{[kls.mapID] = {65,94},[pa.mapID] = {51,48},[veb.mapID] = {67,14},[tjf.mapID] = {9,41}},kls.mapID,icon_earthspiro},
-    [32440] = {C_Map.GetMapInfo(tjf.mapID).name,"|T"..icon_airspirit..":12|t Air Spirit",25,pffl..pfdr..pfel,{[tjf.mapID] = {29,36},[pa.mapID] = {60,45}, [kls.mapID] = {86,87}},tjf.mapID,icon_airspiro},
+    [32434] = {tos.name,"|T"..icon_firespirit..":12|t Fire Spirit",25,pfdr..pfel..pffl,{[tos.mapID] = {57,42},[pa.mapID] = {32,36},[kls.mapID] = {16,64}},tos.mapID,icon_firespiro},
+    [32439] = {dws.name,"|T"..icon_waterspirit..":12|t Water Spirit",25,pfwa..pfcr..pfel,{[dws.mapID] = {61,88},[pa.mapID] = {38,81}},dws.mapID,icon_waterspiro},
+    [32441] = {kls.name,"|T"..icon_earthspirit..":12|t Earth Spirit",25,pfel..pfma..pfbe,{[kls.mapID] = {65,94},[pa.mapID] = {51,48},[veb.mapID] = {67,14},[tjf.mapID] = {9,41}},kls.mapID,icon_earthspiro},
+    [32440] = {tjf.name,"|T"..icon_airspirit..":12|t Air Spirit",25,pffl..pfdr..pfel,{[tjf.mapID] = {29,36},[pa.mapID] = {60,45}, [kls.mapID] = {86,87}},tjf.mapID,icon_airspiro},
 
     -- Pandaria --
-    [31953] = {C_Map.GetMapInfo(tjf.mapID).name,"Hyuna",25,pffl..pfbe..pfwa,{[tjf.mapID] = {48,54},[pa.mapID] = {69,54},},tjf.mapID,tx_bagicon},
-    [31955] = {C_Map.GetMapInfo(vfw.mapID).name,"Nishi",25,pfel..pfel..pfbe,{[vfw.mapID] = {46,44},[pa.mapID] = {51,65},},vfw.mapID,tx_bagicon},
-    [31954] = {C_Map.GetMapInfo(krw.mapID).name,"Mo'ruk",25,pfbe..pffl..pfwa,{[krw.mapID] = {62,45},[pa.mapID] = {56,79},},krw.mapID,tx_bagicon},
-    [31956] = {C_Map.GetMapInfo(kls.mapID).name,"Yon",25,pffl..pfcr..pfbe,{[kls.mapID] = {36,74},[pa.mapID] = {40,40},},kls.mapID,tx_bagicon},
-    [31991] = {C_Map.GetMapInfo(tos.mapID).name,"Zusshi",25,pfel..pfcr..pfwa,{[tos.mapID] = {36,52},[pa.mapID] = {24,40},},tos.mapID,tx_bagicon},
-    [31957] = {C_Map.GetMapInfo(dws.mapID).name,"Shu",25,pfwa..pfel..pfbe,{[dws.mapID] = {55,38},[pa.mapID] = {36,64},},dws.mapID,tx_bagicon},
-    [31958] = {C_Map.GetMapInfo(veb.mapID).name,"Aki",25,pfcr..pfdr..pfwa,{[veb.mapID] = {31,74},[pa.mapID] = {45,58},[dws.mapID] = {83,20},[vfw.mapID] = {25,15},},veb.mapID,tx_bagicon},
+    [31953] = {tjf.name,"Hyuna",25,pffl..pfbe..pfwa,{[tjf.mapID] = {48,54},[pa.mapID] = {69,54},},tjf.mapID,tx_bagicon},
+    [31955] = {vfw.name,"Nishi",25,pfel..pfel..pfbe,{[vfw.mapID] = {46,44},[pa.mapID] = {51,65},},vfw.mapID,tx_bagicon},
+    [31954] = {krw.name,"Mo'ruk",25,pfbe..pffl..pfwa,{[krw.mapID] = {62,45},[pa.mapID] = {56,79},},krw.mapID,tx_bagicon},
+    [31956] = {kls.name,"Yon",25,pffl..pfcr..pfbe,{[kls.mapID] = {36,74},[pa.mapID] = {40,40},},kls.mapID,tx_bagicon},
+    [31991] = {tos.name,"Zusshi",25,pfel..pfcr..pfwa,{[tos.mapID] = {36,52},[pa.mapID] = {24,40},},tos.mapID,tx_bagicon},
+    [31957] = {dws.name,"Shu",25,pfwa..pfel..pfbe,{[dws.mapID] = {55,38},[pa.mapID] = {36,64},},dws.mapID,tx_bagicon},
+    [31958] = {veb.name,"Aki",25,pfcr..pfdr..pfwa,{[veb.mapID] = {31,74},[pa.mapID] = {45,58},[dws.mapID] = {83,20},[vfw.mapID] = {25,15},},veb.mapID,tx_bagicon},
 
     -- Outlands --
-    [31922] = {C_Map.GetMapInfo(465).name,"Nicky Tinytech",20,pfme..pfme..pfme,{[465] = {64,49},[ol.mapID] = {62,52}},465}, -- nicky
-    [31923] = {C_Map.GetMapInfo(467).name,"Ras'an",21,pffl..pfhu..pfma,{[467] = {17,50},[ol.mapID] = {25,48}},467}, -- ras'an
-    [31924] = {C_Map.GetMapInfo(477).name,"Narrok",22,pfwa..pfcr..pfbe,{[477] = {61,49},[ol.mapID] = {35,65}},477}, -- narrok
-    [31925] = {C_Map.GetMapInfo(481).name,"Morulu The Elder",23,pfwa..pfwa..pfwa,{[481] = {59,70},[478] = {32,30},[ol.mapID] = {44,68}},481}, -- morulu
-    [31926] = {C_Map.GetMapInfo(473).name,"Grand Master Antari",24,pfma..pfel..pfdr,{[473] = {31,42},[ol.mapID] = {60,79}},473,tx_bagicon},
+    [31922] = {hfp.name,"Nicky Tinytech",20,pfme..pfme..pfme,{[hfp.mapID] = {64,49},[ol.mapID] = {62,52}},hfp.mapID}, -- nicky
+    [31923] = {zng.name,"Ras'an",21,pffl..pfhu..pfma,{[zng.mapID] = {17,50},[ol.mapID] = {25,48}},zng.mapID}, -- ras'an
+    [31924] = {ona.name,"Narrok",22,pfwa..pfcr..pfbe,{[ona.mapID] = {61,49},[ol.mapID] = {35,65}},ona.mapID}, -- narrok
+    [31925] = {ter.name,"Morulu The Elder",23,pfwa..pfwa..pfwa,{[ter.mapID] = {59,70},[sha.mapID] = {32,30},[ol.mapID] = {44,68}},ter.mapID}, -- morulu
+    [31926] = {osm.name,"Grand Master Antari",24,pfma..pfel..pfdr,{[osm.mapID] = {31,42},[ol.mapID] = {60,79}},osm.mapID,tx_bagicon},
 
     -- Northrend --
-    [31931] = {C_Map.GetMapInfo(hfj.mapID).name,"Beegle Blastfuse",25,pffl..pfwa..pffl,{[hfj.mapID] = {29,34},[nr.mapID] = {69,75},},hfj.mapID}, -- beegle
-    [31933] = {C_Map.GetMapInfo(dbi.mapID).name,"Okrut Dragonwaste",25,pfdr..pfun..pfun,{[dbi.mapID] = {59,77},[nr.mapID] = {50,67},},dbi.mapID}, -- okrut
-    [31934] = {C_Map.GetMapInfo(zdr.mapID).name,"Gutretch",25,pfbe..pfbe..pfcr,{[zdr.mapID] = {13,67},[nr.mapID] = {59,44},},zdr.mapID}, -- gutretch
-    [31932] = {C_Map.GetMapInfo(csf.mapID).name,"Nearly Headless Jacob",25,pfun..pfun..pfun,{[csf.mapID] = {50,59},[nr.mapID] = {51,44},},csf.mapID}, -- headless
-    [31935] = {C_Map.GetMapInfo(icc.mapID).name,"Grand Master Payne",25,pfbe..pfme..pfel, {[icc.mapID] = {77,20},[nr.mapID] = {49,17},},icc.mapID,tx_bagicon},
+    [31931] = {hfj.name,"Beegle Blastfuse",25,pffl..pfwa..pffl,{[hfj.mapID] = {29,34},[nr.mapID] = {69,75},},hfj.mapID}, -- beegle
+    [31933] = {dbi.name,"Okrut Dragonwaste",25,pfdr..pfun..pfun,{[dbi.mapID] = {59,77},[nr.mapID] = {50,67},},dbi.mapID}, -- okrut
+    [31934] = {zdr.name,"Gutretch",25,pfbe..pfbe..pfcr,{[zdr.mapID] = {13,67},[nr.mapID] = {59,44},},zdr.mapID}, -- gutretch
+    [31932] = {csf.name,"Nearly Headless Jacob",25,pfun..pfun..pfun,{[csf.mapID] = {50,59},[nr.mapID] = {51,44},},csf.mapID}, -- headless
+    [31935] = {icc.name,"Grand Master Payne",25,pfbe..pfme..pfel, {[icc.mapID] = {77,20},[nr.mapID] = {49,17},},icc.mapID,tx_bagicon},
 
     -- Cataclysm --
-    [31972] = {C_Map.GetMapInfo(606).name,"Brok",25,pfma..pfbe..pfcr,{[606] = {61,33},[182] = {87,48},[281] = {41,85},[13] = {56,31},},606}, -- 
-    [31973] = {C_Map.GetMapInfo(640).name,"Bordin Steadyfist",25,pfel..pfcr..pfel,{[640] = {50,57},[751] = {50,36},},640}, -- bordin
-    [31971] = {C_Map.GetMapInfo(720).name,"Grand Master Obalis",25,pfbe..pffl..pfcr,{[720] = {57,42},[13] = {49,92},},720,tx_bagicon},
-    [31974] = {C_Map.GetMapInfo(700).name,"Goz Banefury",25,pfel..pfma..pfbe,{[700] = {57,57},[14] = {58,57},},700}, -- goz
+    [31972] = {hyj.name,"Brok",25,pfma..pfbe..pfcr,{[hyj.mapID] = {61,33},[fel.mapID] = {87,48},[wsp.mapID] = {41,85},[ka.mapID] = {56,31},},hyj.mapID}, -- brok
+    [31973] = {dee.name,"Bordin Steadyfist",25,pfel..pfcr..pfel,{[dee.mapID] = {50,57},[tma.mapID] = {50,36},},dee.mapID}, -- bordin
+    [31971] = {uld.name,"Grand Master Obalis",25,pfbe..pffl..pfcr,{[uld.mapID] = {57,42},[ka.mapID] = {49,92},},uld.mapID,tx_bagicon},
+    [31974] = {twh.name,"Goz Banefury",25,pfel..pfma..pfbe,{[twh.mapID] = {57,57},[ek.mapID] = {58,57},},twh.mapID}, -- goz
 
     -- -- Kalimdor --
-    [31818] = {C_Map.GetMapInfo(4).name  ,"Zunta",2,pfbe..pfcr,{[4] = {44,28},[13] = {58,49},[11] = {78,27}},4,nil,"Horde"}, -- zunta
-    [31819] = {C_Map.GetMapInfo(11).name ,"Dagra the Fierce",3,pfbe..pfbe..pfcr,{[11] = {58,53},[13] = {55,53},[4] = {23,58},[607] = {61,9}},11,nil,"Horde"}, -- dagra
-    [31909] = {C_Map.GetMapInfo(281).name,"Grand Master Trixxy",19,pfdr..pfbe..pffl,{[281] = {66,65},[13] = {60,27},},281,tx_bagicon}, -- trixxy
-    [31904] = {C_Map.GetMapInfo(607).name,"Cassandra Kaboom",11,pfme..pfme..pfme,{[607] = {39,79},[13] = {51,67},[9] = {69,98},[141] = {11,48}},607,nil,"Horde"}, -- cassandra
-    [31854] = {C_Map.GetMapInfo(43).name ,"Analynn",5,pfwa..pfcr..pffl,{[43] = {20,29},[13] = {45,38},[182] = {21,91}},43,nil,"Horde"}, -- analynn
-    [31906] = {C_Map.GetMapInfo(61).name ,"Kela Grimtotem",15,pfbe..pfcr..pfcr,{[61] = {32,33},[13] = {51,72},[141] = {16,83}},61,nil,"Horde"}, -- kela
-    [31862] = {C_Map.GetMapInfo(81).name ,"Zonya the Sadist",7,pfbe..pfbe..pfcr,{[81] = {59,71},[13] = {45,50},},81,nil,"Horde"}, -- zonya
-    [31872] = {C_Map.GetMapInfo(101).name,"Merda Stronghoof",9,pfwa..pfcr..pfel,{[101] = {57,45},[13] = {42,56},[9] = {10,21}},101,nil,"Horde"}, -- merda
-    [31905] = {C_Map.GetMapInfo(141).name,"Grazzle the Great",14,pfdr..pfdr..pfdr,{[141] = {53,74},[13] = {57,71},[61] = {77,24}},141,nil,"Horde"},
-    [31871] = {C_Map.GetMapInfo(121).name,"Traitor Gluk",13,pfbe..pfcr..pfdr,{[121] = {60,50},[13] = {43,72},},121,nil,"Horde"}, -- traitor
-    [31907] = {C_Map.GetMapInfo(182).name,"Zoltan",16,pfma..pfma..pfme,{[182] = {40,56},[13] = {48,31},[42] = {56,75},},182,nil,"Horde"}, -- zoltan
-    [31908] = {C_Map.GetMapInfo(241).name,"Elena Flutterfly",17,pfdr..pffl..pfma,{[241] = {46,60},[13] = {53,21},[42] = {84,15},},241,nil,"Horde"}, -- elena
+    [31818] = {dur.name,"Zunta",2,pfbe..pfcr,{[dur.mapID] = {44,28},[ka.mapID] = {58,49},[nob.mapID] = {78,27}},dur.mapID,nil,"Horde"}, -- zunta
+    [31819] = {nob.name,"Dagra the Fierce",3,pfbe..pfbe..pfcr,{[nob.mapID] = {58,53},[ka.mapID] = {55,53},[dur.mapID] = {23,58},[sob.mapID] = {61,9}},nob.mapID,nil,"Horde"}, -- dagra
+    [31909] = {wsp.name,"Grand Master Trixxy",19,pfdr..pfbe..pffl,{[wsp.mapID] = {66,65},[ka.mapID] = {60,27},},wsp.mapID,tx_bagicon}, -- trixxy
+    [31904] = {sob.name,"Cassandra Kaboom",11,pfme..pfme..pfme,{[sob.mapID] = {39,79},[ka.mapID] = {51,67},[mul.mapID] = {69,98},[dwm.mapID] = {11,48}},sob.mapID,nil,"Horde"}, -- cassandra
+    [31854] = {asv.name,"Analynn",5,pfwa..pfcr..pffl,{[asv.mapID] = {20,29},[ka.mapID] = {45,38},[fel.mapID] = {21,91}},asv.mapID,nil,"Horde"}, -- analynn
+    [31906] = {thn.name,"Kela Grimtotem",15,pfbe..pfcr..pfcr,{[thn.mapID] = {32,33},[ka.mapID] = {51,72},[dwm.mapID] = {16,83}},thn.mapID,nil,"Horde"}, -- kela
+    [31862] = {stm.name,"Zonya the Sadist",7,pfbe..pfbe..pfcr,{[81] = {59,71},[ka.mapID] = {45,50},},81,nil,"Horde"}, -- zonya
+    [31872] = {des.name,"Merda Stronghoof",9,pfwa..pfcr..pfel,{[des.mapID] = {57,45},[ka.mapID] = {42,56},[mul.mapID] = {10,21}},des.mapID,nil,"Horde"}, -- merda
+    [31905] = {dwm.name,"Grazzle the Great",14,pfdr..pfdr..pfdr,{[dwm.mapID] = {53,74},[ka.mapID] = {57,71},[thn.mapID] = {77,24}},dwm.mapID,nil,"Horde"},
+    [31871] = {fer.name,"Traitor Gluk",13,pfbe..pfcr..pfdr,{[fer.mapID] = {60,50},[ka.mapID] = {43,72},},fer.mapID,nil,"Horde"}, -- traitor
+    [31907] = {fel.name,"Zoltan",16,pfma..pfma..pfme,{[fel.mapID] = {40,56},[ka.mapID] = {48,31},[dks.mapID] = {56,75},},fel.mapID,nil,"Horde"}, -- zoltan
+    [31908] = {moo.name,"Elena Flutterfly",17,pfdr..pffl..pfma,{[moo.mapID] = {46,60},[ka.mapID] = {53,21},[dks.mapID] = {84,15},},moo.mapID,nil,"Horde"}, -- elena
 
     -- Eastern Kingdoms --
-    [31693] = {C_Map.GetMapInfo(30).name ,"Julia Stevens",2,pfbe..pfbe,{[30] = {42,84},[14] = {44,78},},30,nil,"Alliance"}, -- julia
-    [31914] = {C_Map.GetMapInfo(29).name ,"Durin Darkhammer",17,pffl..pfcr..pfel,{[29] = {25,47},[14] = {48,70},},29,nil,"Alliance"}, -- durin
-    [31850] = {C_Map.GetMapInfo(34).name ,"Eric Davidson",7,pfbe..pfbe..pfbe,{[34] = {20,44},[14] = {44,80},},34,nil,"Alliance"},
-    [31781] = {C_Map.GetMapInfo(36).name ,"Lindsay",5,pfcr..pfcr..pfcr,{[36] = {33,52},[14] = {50,76},},36,nil,"Alliance"}, -- lindsay
-    [31912] = {C_Map.GetMapInfo(28).name ,"Kortas Darkhammer",15,pfdr..pfdr..pfdr,{[28] = {35,27},[14] = {47,65},},28,nil,"Alliance"}, -- kortas
-    [31852] = {C_Map.GetMapInfo(37).name ,"Steven Lisbane",9,pfbe..pfbe..pfma,{[37] = {46,40},[689] = {47,26},[14] = {45,85},},37,nil,"Alliance"}, -- steven
-    [31851] = {C_Map.GetMapInfo(673).name,"Bill Buckler",11,pfhu..pffl..pffl,{[673] = {51,73},[689] = {44,79},[14] = {44,94},},673,nil,"Alliance"}, -- bill
-    [31913] = {C_Map.GetMapInfo(38).name ,"Everessa",16,pffl..pfwa..pfbe,{[38] = {76,41},[14] = {54,79},},38,nil,"Alliance"}, -- everessa
-    [31910] = {C_Map.GetMapInfo(26).name ,"David Kosse",13,pfcr..pfbe..pfma,{[26] = {62,54},[14] = {54,41},},26,nil,"Alliance"}, -- david
-    [31780] = {C_Map.GetMapInfo(39).name ,"Old MacDonald",3,pfme..pffl..pfcr,{[39] = {61,19},[14] = {42,77},},39,nil,"Alliance"}, -- mcdonald
-    [31916] = {C_Map.GetMapInfo(32).name ,"Grand Master Lydia Accoste",19,pfel..pfun..pfun,{[32] = {40,77},[14] = {49,82},},32,tx_bagicon},
-    [31911] = {C_Map.GetMapInfo(23).name ,"Deiza Plaguehorn",14,pfbe..pfbe..pfun,{[23] = {67,54},[14] = {57,32},},23,nil,"Alliance"}, -- deiza
+    [31693] = {C_Map.GetMapInfo(30).name ,"Julia Stevens",2,pfbe..pfbe,{[30] = {42,84},[ek.mapID] = {44,78},},30,nil,"Alliance"}, -- julia
+    [31914] = {C_Map.GetMapInfo(29).name ,"Durin Darkhammer",17,pffl..pfcr..pfel,{[29] = {25,47},[ek.mapID] = {48,70},},29,nil,"Alliance"}, -- durin
+    [31850] = {C_Map.GetMapInfo(34).name ,"Eric Davidson",7,pfbe..pfbe..pfbe,{[34] = {20,44},[ek.mapID] = {44,80},},34,nil,"Alliance"},
+    [31781] = {C_Map.GetMapInfo(36).name ,"Lindsay",5,pfcr..pfcr..pfcr,{[36] = {33,52},[ek.mapID] = {50,76},},36,nil,"Alliance"}, -- lindsay
+    [31912] = {C_Map.GetMapInfo(28).name ,"Kortas Darkhammer",15,pfdr..pfdr..pfdr,{[28] = {35,27},[ek.mapID] = {47,65},},28,nil,"Alliance"}, -- kortas
+    [31852] = {C_Map.GetMapInfo(37).name ,"Steven Lisbane",9,pfbe..pfbe..pfma,{[37] = {46,40},[689] = {47,26},[ek.mapID] = {45,85},},37,nil,"Alliance"}, -- steven
+    [31851] = {C_Map.GetMapInfo(673).name,"Bill Buckler",11,pfhu..pffl..pffl,{[673] = {51,73},[689] = {44,79},[ek.mapID] = {44,94},},673,nil,"Alliance"}, -- bill
+    [31913] = {C_Map.GetMapInfo(38).name ,"Everessa",16,pffl..pfwa..pfbe,{[38] = {76,41},[ek.mapID] = {54,79},},38,nil,"Alliance"}, -- everessa
+    [31910] = {C_Map.GetMapInfo(26).name ,"David Kosse",13,pfcr..pfbe..pfma,{[26] = {62,54},[ek.mapID] = {54,41},},26,nil,"Alliance"}, -- david
+    [31780] = {C_Map.GetMapInfo(39).name ,"Old MacDonald",3,pfme..pffl..pfcr,{[39] = {61,19},[ek.mapID] = {42,77},},39,nil,"Alliance"}, -- mcdonald
+    [31916] = {C_Map.GetMapInfo(32).name ,"Grand Master Lydia Accoste",19,pfel..pfun..pfun,{[32] = {40,77},[ek.mapID] = {49,82},},32,tx_bagicon},
+    [31911] = {C_Map.GetMapInfo(23).name ,"Deiza Plaguehorn",14,pfbe..pfbe..pfun,{[23] = {67,54},[ek.mapID] = {57,32},},23,nil,"Alliance"}, -- deiza
       
     -- Timeless Isle --
-    [33222] = {C_Map.GetMapInfo(tti.mapID).name,"Little Tommy",125,pfbe,{[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
-    [33137] = {8410,"",25,"",{[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
+    [33222] = {tti.name,"Little Tommy",125,pfbe,{[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
+    [33137] = {8410,"Celestial Tournament",25,"",{[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
 
     -- Elite Pets --
-    [epspecial..1] = {C_Map.GetMapInfo(tjf.mapID).name,ep_quest_missing,125,pfcr,{[tjf.mapID] = {48,71},[pa.mapID] = {68,61},},tjf.mapID,ep_icon}, -- Kawi I
-    [epspecial..2] = {C_Map.GetMapInfo(kls.mapID).name,ep_quest_missing,125,pfbe,{[kls.mapID] = {35,56},[pa.mapID] = {39,32},[tos.mapID] = {77,33}},kls.mapID,ep_icon}, -- kafi I
-    [epspecial..3] = {C_Map.GetMapInfo(kls.mapID).name,ep_quest_missing,125,pfwa,{[kls.mapID] = {68,85},[pa.mapID] = {52,44},[tjf.mapID] = {12,33}},kls.mapID,ep_icon}, -- dos ryga I
-    [epspecial..4] = {C_Map.GetMapInfo(tjf.mapID).name,ep_quest_missing,125,pfcr,{[tjf.mapID] = {57,29},[pa.mapID] = {72,42},},tjf.mapID,ep_icon}, -- Noun I
-    [epspecial..5] = {C_Map.GetMapInfo(vfw.mapID).name,ep_quest_missing,125,pfbe,{[vfw.mapID] = {25,78},[pa.mapID] = {45,73},[krw.mapID] = {26,27},[dws.mapID] = {83,66}},vfw.mapID,ep_icon}, -- Greyhoof II
-    [epspecial..6] = {C_Map.GetMapInfo(vfw.mapID).name,ep_quest_missing,125,pfcr,{[vfw.mapID] = {40,43},[pa.mapID] = {49,65},[dws.mapID] = {94,41}},vfw.mapID,ep_icon}, -- Lucky Yi II
-    [epspecial..7] = {C_Map.GetMapInfo(krw.mapID).name,ep_quest_missing,125,pfwa,{[krw.mapID] = {36,37},[pa.mapID] = {48,76},[dws.mapID] = {91,75},[vfw.mapID] = {36,90},},krw.mapID,ep_icon}, -- xia II
-    [epspecial..8] = {C_Map.GetMapInfo(dws.mapID).name,ep_quest_missing,125,pfbe,{[dws.mapID] = {26,50},[pa.mapID] = {25,68},},dws.mapID,ep_icon}, -- Gorespine III
-    [epspecial..9] = {C_Map.GetMapInfo(veb.mapID).name,ep_quest_missing,125,pfwa,{[veb.mapID] = {11,70},[pa.mapID] = {42,57},[dws.mapID] = {73,18}, [vfw.mapID] = {12,13},},veb.mapID,ep_icon}, -- no-no III
-    [epspecial..10] = {C_Map.GetMapInfo(tos.mapID).name,ep_quest_missing,125,pfwa,{[tos.mapID] = {72,80},[pa.mapID] = {37,50},[kls.mapID] = {30,98}},tos.mapID,ep_icon}, -- ti'un III
+     [epspecial..1] = {tjf.name,ep_quest_missing,125,pfcr,{[tjf.mapID] = {48,71},[pa.mapID] = {68,61},},tjf.mapID,ep_icon}, -- Kawi I
+     [epspecial..2] = {kls.name,ep_quest_missing,125,pfbe,{[kls.mapID] = {35,56},[pa.mapID] = {39,32},[tos.mapID] = {77,33}},kls.mapID,ep_icon}, -- kafi I
+     [epspecial..3] = {kls.name,ep_quest_missing,125,pfwa,{[kls.mapID] = {68,85},[pa.mapID] = {52,44},[tjf.mapID] = {12,33}},kls.mapID,ep_icon}, -- dos ryga I
+     [epspecial..4] = {tjf.name,ep_quest_missing,125,pfcr,{[tjf.mapID] = {57,29},[pa.mapID] = {72,42},},tjf.mapID,ep_icon}, -- Noun I
+     [epspecial..5] = {vfw.name,ep_quest_missing,125,pfbe,{[vfw.mapID] = {25,78},[pa.mapID] = {45,73},[krw.mapID] = {26,27},[dws.mapID] = {83,66}},vfw.mapID,ep_icon}, -- Greyhoof II
+     [epspecial..6] = {vfw.name,ep_quest_missing,125,pfcr,{[vfw.mapID] = {40,43},[pa.mapID] = {49,65},[dws.mapID] = {94,41}},vfw.mapID,ep_icon}, -- Lucky Yi II
+     [epspecial..7] = {krw.name,ep_quest_missing,125,pfwa,{[krw.mapID] = {36,37},[pa.mapID] = {48,76},[dws.mapID] = {91,75},[vfw.mapID] = {36,90},},krw.mapID,ep_icon}, -- xia II
+     [epspecial..8] = {dws.name,ep_quest_missing,125,pfbe,{[dws.mapID] = {26,50},[pa.mapID] = {25,68},},dws.mapID,ep_icon}, -- Gorespine III
+     [epspecial..9] = {veb.name,ep_quest_missing,125,pfwa,{[veb.mapID] = {11,70},[pa.mapID] = {42,57},[dws.mapID] = {73,18}, [vfw.mapID] = {12,13},},veb.mapID,ep_icon}, -- no-no III
+    [epspecial..10] = {tos.name,ep_quest_missing,125,pfwa,{[tos.mapID] = {72,80},[pa.mapID] = {37,50},[kls.mapID] = {30,98}},tos.mapID,ep_icon}, -- ti'un III
 
     -- Events
     
     -- Darkmoon Fairie
-    [32175] = {"|TInterface\\icons\\INV_Misc_Eye_01:12|t "..CALENDAR_FILTER_DARKMOON,"Jeremy Feasel",25,pfma..pfme..pfbe,{[823] = {47,60}}, 823},
-	  [36471] = {"|TInterface\\icons\\INV_Misc_Eye_01:12|t "..CALENDAR_FILTER_DARKMOON,"Christoph VonFeasel",25,pfma..pfbe..pfbe,{[823] = {47,60}}, 823}
+    [32175] = {"|TInterface\\icons\\INV_Misc_Eye_01:12|t "..CALENDAR_FILTER_DARKMOON,"Jeremy Feasel",25,pfma..pfme..pfbe,{[dmi.mapID] = {47,60}}, dmi.mapID},
+	  [36471] = {"|TInterface\\icons\\INV_Misc_Eye_01:12|t "..CALENDAR_FILTER_DARKMOON,"Christoph VonFeasel",25,pfma..pfbe..pfbe,{[dmi.mapID] = {47,60}}, dmi.mapID}
       
   }
     
@@ -523,7 +558,7 @@ local result = false
  
               -- Horde only (Kalimdor) --
                 [select(2,GetAchievementInfo(6602)).." ("..FACTION_HORDE..")"] =
-                 {31854,31904,31819,31908,31905,31906,31872,31871,31907,31pa.mapID,31818},
+                 {31854,31904,31819,31908,31905,31906,31872,31871,31907,31862,31818},
               -- Alliance only (Eastern Kingdoms) --
                 [select(2,GetAchievementInfo(6603)).." ("..FACTION_ALLIANCE..")"] =
                  {31851,31910,31911,31914,31850,31913,31693,31912,31781,31780,31852} }
@@ -748,7 +783,7 @@ local function CreateCheckbox(parent,id,option,mo_tooltip,tx,offsetX,offsetY)
  end
 
   if not parent.checkbox[id] then
-   chkbox = CreateFrame("FRAME", nil, parent.optionsframe)
+   chkbox = CreateFrame("FRAME", nil, parent.optionsframe, BackdropTemplateMixin and "BackdropTemplate")
    chkbox.texture = chkbox:CreateTexture()
   else 
    chkbox = parent.checkbox[id]
@@ -800,19 +835,19 @@ end --CreateCheckBox
 local function CreateNewFrameButton(id,pos,tx)
 local result, button
  if not DailyTamerCheck_mainframe.buttons[id] then
-  button = CreateFrame("FRAME", nil, DailyTamerCheck_mainframe)
+  button = CreateFrame("FRAME", nil, DailyTamerCheck_mainframe, BackdropTemplateMixin and "BackdropTemplate")
  else button = DailyTamerCheck_mainframe.buttons[id]
  end
  if not button.texture then
   button.texture = button:CreateTexture()
  end
  if not DailyTamerCheck_mainframe.frames[id] then
-  result = CreateFrame("Frame")
+  result = CreateFrame("Frame", nil, UIParent, BackdropTemplateMixin and "BackdropTemplate")
  else result = DailyTamerCheck_mainframe.frames[id]
  end
  result:SetParent(DailyTamerCheck_mainframe)
- --result:SetBackdrop(frames_backdrop);
- --result:SetBackdropColor(0,0,0,0.8);
+ result:SetBackdrop(frames_backdrop);
+ result:SetBackdropColor(0,0,0,0.8);
  if not result.leftfont then
   result.leftfont = result:CreateFontString(nil, "OVERLAY", "GameTooltipText")
  end
@@ -937,7 +972,7 @@ else
   
    -- options' checkboxes
    if not DailyTamerCheck_mainframe.optionsframe then
-    DailyTamerCheck_mainframe.optionsframe = CreateFrame("FRAME", nil, DailyTamerCheck_mainframe)
+    DailyTamerCheck_mainframe.optionsframe = CreateFrame("FRAME", nil, DailyTamerCheck_mainframe, BackdropTemplateMixin and "BackdropTemplate")
     DailyTamerCheck_mainframe.optionsframe.texture = DailyTamerCheck_mainframe.optionsframe:CreateTexture()
     --DailyTamerCheck_mainframe.optionsframe:SetPoint("BOTTOMLEFT", DailyTamerCheck_mainframe, "BOTTOMLEFT",45,10)
     DailyTamerCheck_mainframe.optionsframe:SetPoint("BOTTOM",DailyTamerCheck_mainframe,"BOTTOM",-centerbuttons_spacing,10)
@@ -1014,7 +1049,7 @@ CreateCheckbox(DailyTamerCheck_mainframe,5,"show_faction",
                               keepShownOnClick = true,
                        func = function(self)
                                if questsdata[questID][MAPDATA] then
-                                 TomTom:AddMFWaypoint(questsdata[questID][MAPDEFAULT], nil,
+                                 TomTom:AddWaypoint(questsdata[questID][MAPDEFAULT],
                                           questsdata[questID][MAPDATA][questsdata[questID][MAPDEFAULT]][1] / 100,
                                           questsdata[questID][MAPDATA][questsdata[questID][MAPDEFAULT]][2] / 100,
                                           { title = questsdata[questID][NPCNAME]})
@@ -1042,7 +1077,7 @@ CreateCheckbox(DailyTamerCheck_mainframe,5,"show_faction",
                        func = function(self)
                                table.foreach(quests, function(_,questID)
                                 if questsdata[questID][MAPDATA] and not isquestcompleted(questID) then
-                                 TomTom:AddMFWaypoint(questsdata[questID][MAPDEFAULT], nil,
+                                 TomTom:AddWaypoint(questsdata[questID][MAPDEFAULT],
                                           questsdata[questID][MAPDATA][questsdata[questID][MAPDEFAULT]][1] / 100,
                                           questsdata[questID][MAPDATA][questsdata[questID][MAPDEFAULT]][2] / 100,
                                           { title = questsdata[questID][NPCNAME] } )
@@ -1057,7 +1092,7 @@ CreateCheckbox(DailyTamerCheck_mainframe,5,"show_faction",
   table.insert(DTCTTmenu, {text = "", isTitle = true, notCheckable = 1})
   table.insert(DTCTTmenu, {text = "Close", notCheckable = 1})
 
-  DailyTamerCheck_mainframe.Itomtomframe = CreateFrame("FRAME", nil, DailyTamerCheck_mainframe)
+  DailyTamerCheck_mainframe.Itomtomframe = CreateFrame("FRAME", nil, DailyTamerCheck_mainframe, BackdropTemplateMixin and "BackdropTemplate")
   DailyTamerCheck_mainframe.Itomtomframe:SetPoint("BOTTOMLEFT",DailyTamerCheck_mainframe,"BOTTOMLEFT",5,40)
   DailyTamerCheck_mainframe.Itomtomframe:SetWidth(60)
   DailyTamerCheck_mainframe.Itomtomframe:SetHeight(25)
@@ -1224,7 +1259,7 @@ local function eventhandler(self, event, ...)
    end -- quest found
   end
  elseif event == "PLAYER_ENTERING_WORLD" then
-  OpenCalendar()
+  C_Calendar.OpenCalendar()
   if GenerateTables() then
    -- initial sorting
    OnOptionChanged("show_npclevel")
