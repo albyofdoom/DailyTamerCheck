@@ -270,7 +270,7 @@ local dmi = C_Map.GetMapInfo(407) -- Darkmoon Island
 	  [39157] = {taj.name,"Felsworn Sentry"      ,    25,pfme,{[taj.mapID] = {26.1,31.6}},taj.mapID,tx_wod_bagicon}, -- felsworn sentry
 	  [39160] = {taj.name,"Corrupted Thundertail",    25,pfbe,{[taj.mapID] = {53,65.2}},  taj.mapID,tx_wod_bagicon}, -- corrupted thundertail
 	  [39161] = {taj.name,"Chaos Pup"            ,    25,pfbe,{[taj.mapID] = {25,76.4}},  taj.mapID,tx_wod_bagicon}, -- chaos pup
-	  [39162] = {taj.name,"Cursed Spiro"         ,    25,pfun,{[taj.mapID] = {31.2,38.2}},taj.mapID,tx_wod_bagicon}, -- cursed spirit
+	  [39162] = {taj.name,"Cursed Spirit"         ,    25,pfun,{[taj.mapID] = {31.2,38.2}},taj.mapID,tx_wod_bagicon}, -- cursed spirit
 	  [39163] = {taj.name,"Felfly"               ,    25,pffl,{[taj.mapID] = {55.9,80.8}},taj.mapID,tx_wod_bagicon}, -- felfly
 	  [39164] = {taj.name,"Tainted Maulclaw"     ,    25,pfwa,{[taj.mapID] = {43.2,84.5}},taj.mapID,tx_wod_bagicon}, -- tainted maulclaw
 	  [39165] = {taj.name,"Direflame"            ,    25,pfel,{[taj.mapID] = {57.6,37.2}},taj.mapID,tx_wod_bagicon}, -- direflame

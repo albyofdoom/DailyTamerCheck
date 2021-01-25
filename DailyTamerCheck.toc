@@ -1,4 +1,4 @@
-## Interface: 70300
+## Interface: 90002
 ## Title: Daily Tamer Check
 ## Author: Jadya EU - Well of Eternity
 ## Notes: Tracks the completion of pet tamer daily quests.
