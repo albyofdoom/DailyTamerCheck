@@ -260,108 +260,109 @@ local nst = C_Map.GetMapInfo(50)  -- Northern Stranglethorn
 local sos = C_Map.GetMapInfo(51)  -- Swamp of Sorrows
 local wef = C_Map.GetMapInfo(52)  -- Westfall
 local cos = C_Map.GetMapInfo(210) -- The Cape of Stranglethorn
+local stv = C_Map.GetMapInfo(224) -- Stranglethorn Vale
 
 local dmi = C_Map.GetMapInfo(407) -- Darkmoon Island
 
 ------- localized zone and npc names from GetAchievementCriteriaInfo --------
  questsdata = {
      -- Tanaan Jungle --
-	  [39157] = {taj.name,"Felsworn Sentry"      ,25,pfme,{[taj.mapID] = {26.1,31.6}},taj.mapID,tx_wod_bagicon}, -- felsworn sentry
-	  [39160] = {taj.name,"Corrupted Thundertail",25,pfbe,{[taj.mapID] = {53,65.2}},  taj.mapID,tx_wod_bagicon}, -- corrupted thundertail
-	  [39161] = {taj.name,"Chaos Pup"            ,25,pfbe,{[taj.mapID] = {25,76.4}},  taj.mapID,tx_wod_bagicon}, -- chaos pup
-	  [39162] = {taj.name,"Cursed Spiro"         ,25,pfun,{[taj.mapID] = {31.2,38.2}},taj.mapID,tx_wod_bagicon}, -- cursed spirit
-	  [39163] = {taj.name,"Felfly"               ,25,pffl,{[taj.mapID] = {55.9,80.8}},taj.mapID,tx_wod_bagicon}, -- felfly
-	  [39164] = {taj.name,"Tainted Maulclaw"     ,25,pfwa,{[taj.mapID] = {43.2,84.5}},taj.mapID,tx_wod_bagicon}, -- tainted maulclaw
-	  [39165] = {taj.name,"Direflame"            ,25,pfel,{[taj.mapID] = {57.6,37.2}},taj.mapID,tx_wod_bagicon}, -- direflame
-	  [39166] = {taj.name,"Mirecroak"            ,25,pfwa,{[taj.mapID] = {42.3,71.8}},taj.mapID,tx_wod_bagicon}, -- mirecroak
-	  [39167] = {taj.name,"Dark Gazer"           ,25,pfma,{[taj.mapID] = {54,30}},    taj.mapID,tx_wod_bagicon}, -- dark gazer
-	  [39168] = {taj.name,"Bleakclaw"            ,25,pffl,{[taj.mapID] = {16,44.6}},  taj.mapID,tx_wod_bagicon}, -- bleakclaw
-	  [39169] = {taj.name,"Vile Blood of Draenor",25,pfma,{[taj.mapID] = {43.8,45.8}},taj.mapID,tx_wod_bagicon}, -- vile blood of draenor
-	  [39170] = {taj.name,"Dreadwalker"          ,25,pfme,{[taj.mapID] = {47.2,52.6}},taj.mapID,tx_wod_bagicon}, -- dreadwalker
-	  [39171] = {taj.name,"Netherfist"           ,25,pfhu,{[taj.mapID] = {48.4,35.6}},taj.mapID,tx_wod_bagicon}, -- netherfist
-	  [39172] = {taj.name,"Skrillix"             ,25,pfhu,{[taj.mapID] = {48.6,31.2}},taj.mapID,tx_wod_bagicon}, -- skrillix
-    [39173] = {taj.name,"Defiled Earth"        ,25,pfel,{[taj.mapID] = {75.4,37.4}},taj.mapID,tx_wod_bagicon}, -- defiled earth
+	  [39157] = {taj.name,"Felsworn Sentry"      ,    25,pfme,{[taj.mapID] = {26.1,31.6}},taj.mapID,tx_wod_bagicon}, -- felsworn sentry
+	  [39160] = {taj.name,"Corrupted Thundertail",    25,pfbe,{[taj.mapID] = {53,65.2}},  taj.mapID,tx_wod_bagicon}, -- corrupted thundertail
+	  [39161] = {taj.name,"Chaos Pup"            ,    25,pfbe,{[taj.mapID] = {25,76.4}},  taj.mapID,tx_wod_bagicon}, -- chaos pup
+	  [39162] = {taj.name,"Cursed Spiro"         ,    25,pfun,{[taj.mapID] = {31.2,38.2}},taj.mapID,tx_wod_bagicon}, -- cursed spirit
+	  [39163] = {taj.name,"Felfly"               ,    25,pffl,{[taj.mapID] = {55.9,80.8}},taj.mapID,tx_wod_bagicon}, -- felfly
+	  [39164] = {taj.name,"Tainted Maulclaw"     ,    25,pfwa,{[taj.mapID] = {43.2,84.5}},taj.mapID,tx_wod_bagicon}, -- tainted maulclaw
+	  [39165] = {taj.name,"Direflame"            ,    25,pfel,{[taj.mapID] = {57.6,37.2}},taj.mapID,tx_wod_bagicon}, -- direflame
+	  [39166] = {taj.name,"Mirecroak"            ,    25,pfwa,{[taj.mapID] = {42.3,71.8}},taj.mapID,tx_wod_bagicon}, -- mirecroak
+	  [39167] = {taj.name,"Dark Gazer"           ,    25,pfma,{[taj.mapID] = {54,30}},    taj.mapID,tx_wod_bagicon}, -- dark gazer
+	  [39168] = {taj.name,"Bleakclaw"            ,    25,pffl,{[taj.mapID] = {16,44.6}},  taj.mapID,tx_wod_bagicon}, -- bleakclaw
+	  [39169] = {taj.name,"Vile Blood of Draenor",    25,pfma,{[taj.mapID] = {43.8,45.8}},taj.mapID,tx_wod_bagicon}, -- vile blood of draenor
+	  [39170] = {taj.name,"Dreadwalker"          ,    25,pfme,{[taj.mapID] = {47.2,52.6}},taj.mapID,tx_wod_bagicon}, -- dreadwalker
+	  [39171] = {taj.name,"Netherfist"           ,    25,pfhu,{[taj.mapID] = {48.4,35.6}},taj.mapID,tx_wod_bagicon}, -- netherfist
+	  [39172] = {taj.name,"Skrillix"             ,    25,pfhu,{[taj.mapID] = {48.6,31.2}},taj.mapID,tx_wod_bagicon}, -- skrillix
+    [39173] = {taj.name,"Defiled Earth"        ,    25,pfel,{[taj.mapID] = {75.4,37.4}},taj.mapID,tx_wod_bagicon}, -- defiled earth
 
     -- Garrison --
-	  [36483] = {lf.name,GARRISON_LOCATION_TOOLTIP,25,"",{[lf.mapID] = {28.9,42.8},[smv.mapID] = {28.6,17.1},[dr.mapID] = {52.3,61.3}},lf.mapID,tx_wod_bagicon,"Alliance"},
-    [36662] = {fw.name,GARRISON_LOCATION_TOOLTIP,25,"",{[fw.mapID] = {32.06,43.59},[ffr.mapID] = {46.54,65.36},[dr.mapID] = {33.35,36.83}},fw.mapID,tx_wod_bagicon,"Horde"},
-	  [38299] = {lf.name,"Erris",25,"",{[lf.mapID] = {28.9,42.8},[smv.mapID] = {28.6,17.1},[dr.mapID] = {52.3,61.3}},lf.mapID,tx_wod_bagicon,"Alliance"},
-    [38300] = {fw.name,"Kura",25,"",{[fw.mapID] = {32.06,43.59},[ffr.mapID] = {46.54,65.36},[dr.mapID] = {33.35,36.83}},fw.mapID,tx_wod_bagicon,"Horde"},
+	  [36483] = {lf.name,GARRISON_LOCATION_TOOLTIP,   25,"Lunarfall",{[lf.mapID] = {28.9,42.8},[smv.mapID] = {28.6,17.1},[dr.mapID] = {52.3,61.3}},lf.mapID,tx_wod_bagicon,"Alliance"},
+    [36662] = {fw.name,GARRISON_LOCATION_TOOLTIP,   25,"Frostwall",{[fw.mapID] = {32.06,43.59},[ffr.mapID] = {46.54,65.36},[dr.mapID] = {33.35,36.83}},fw.mapID,tx_wod_bagicon,"Horde"},
+	  [38299] = {lf.name,"Erris",                     25,"",{[lf.mapID] = {28.9,42.8},[smv.mapID] = {28.6,17.1},[dr.mapID] = {52.3,61.3}},lf.mapID,tx_wod_bagicon,"Alliance"},
+    [38300] = {fw.name,"Kura",                      25,"",{[fw.mapID] = {32.06,43.59},[ffr.mapID] = {46.54,65.36},[dr.mapID] = {33.35,36.83}},fw.mapID,tx_wod_bagicon,"Horde"},
     
      -- Draenor --
-    [37203] = {smv.name,"Ashlei"           ,25,pfma..pfma..pfbe,{[smv.mapID] = {50,30},[dr.mapID] = {58.6,65.5}},smv.mapID,tx_wod_bagicon}, -- ashlei
-	  [37205] = {ffr.name,"Gargra"           ,25,pfbe..pfbe..pfbe,{[ffr.mapID] = {68.6,64.7},[dr.mapID] = {39.2,36.7}},ffr.mapID,tx_wod_bagicon}, -- gargra
-	  [37206] = {nag.name,"Tarr the Terrible",25,pfhu..pfhu..pfhu,{[nag.mapID] = {56.2,9.8},[dr.mapID] = {27,43.8}},nag.mapID,tx_wod_bagicon}, -- tarr
-	  [37208] = {tal.name,"Taralune"         ,25,pffl..pffl..pffl,{[tal.mapID] = {49.1,80.4},[dr.mapID] = {41.1,65.7}},tal.mapID,tx_wod_bagicon}, -- taralune
-	  [37201] = {gor.name,"Cymre Brighblade" ,25,pfun..pfma..pfme,{[gor.mapID] = {51,71},[dr.mapID] = {50,36}},gor.mapID,tx_wod_bagicon}, -- cymre
-	  [37207] = {soa.name,"Vesharr"          ,25,pffl..pfme..pffl,{[soa.mapID] = {46.3,45.3},[dr.mapID] = {45.6,76.8}},soa.mapID,tx_wod_bagicon}, -- vesharr
+    [37203] = {smv.name,"Ashlei"           ,        25,pfma..pfma..pfbe,{[smv.mapID] = {50,30},[dr.mapID] = {58.6,65.5}},smv.mapID,tx_wod_bagicon}, -- ashlei
+	  [37205] = {ffr.name,"Gargra"           ,        25,pfbe..pfbe..pfbe,{[ffr.mapID] = {68.6,64.7},[dr.mapID] = {39.2,36.7}},ffr.mapID,tx_wod_bagicon}, -- gargra
+	  [37206] = {nag.name,"Tarr the Terrible",        25,pfhu..pfhu..pfhu,{[nag.mapID] = {56.2,9.8},[dr.mapID] = {27,43.8}},nag.mapID,tx_wod_bagicon}, -- tarr
+	  [37208] = {tal.name,"Taralune"         ,        25,pffl..pffl..pffl,{[tal.mapID] = {49.1,80.4},[dr.mapID] = {41.1,65.7}},tal.mapID,tx_wod_bagicon}, -- taralune
+	  [37201] = {gor.name,"Cymre Brighblade" ,        25,pfun..pfma..pfme,{[gor.mapID] = {51,71},[dr.mapID] = {50,36}},gor.mapID,tx_wod_bagicon}, -- cymre
+	  [37207] = {soa.name,"Vesharr"          ,        25,pffl..pfme..pffl,{[soa.mapID] = {46.3,45.3},[dr.mapID] = {45.6,76.8}},soa.mapID,tx_wod_bagicon}, -- vesharr
       
     -- Pandaren Spirits --
-    [32434] = {tos.name,"|T"..icon_firespirit..":12|t Fire Spirit",25,pfdr..pfel..pffl,{[tos.mapID] = {57,42},[pa.mapID] = {32,36},[kls.mapID] = {16,64}},tos.mapID,icon_firespiro},
-    [32439] = {dws.name,"|T"..icon_waterspirit..":12|t Water Spirit",25,pfwa..pfcr..pfel,{[dws.mapID] = {61,88},[pa.mapID] = {38,81}},dws.mapID,icon_waterspiro},
-    [32441] = {kls.name,"|T"..icon_earthspirit..":12|t Earth Spirit",25,pfel..pfma..pfbe,{[kls.mapID] = {65,94},[pa.mapID] = {51,48},[veb.mapID] = {67,14},[tjf.mapID] = {9,41}},kls.mapID,icon_earthspiro},
-    [32440] = {tjf.name,"|T"..icon_airspirit..":12|t Air Spirit",25,pffl..pfdr..pfel,{[tjf.mapID] = {29,36},[pa.mapID] = {60,45}, [kls.mapID] = {86,87}},tjf.mapID,icon_airspiro},
+    [32434] = {tos.name,"|T"..icon_firespirit..":12|t Fire Spirit",25,pfdr..pfel..pffl,{[tos.mapID] = {57,42},[pa.mapID] = {32,36},[kls.mapID] = {16,64}},tos.mapID,icon_firespirit},
+    [32439] = {dws.name,"|T"..icon_waterspirit..":12|t Water Spirit",25,pfwa..pfcr..pfel,{[dws.mapID] = {61,88},[pa.mapID] = {38,81}},dws.mapID,icon_waterspirit},
+    [32441] = {kls.name,"|T"..icon_earthspirit..":12|t Earth Spirit",25,pfel..pfma..pfbe,{[kls.mapID] = {65,94},[pa.mapID] = {51,48},[veb.mapID] = {67,14},[tjf.mapID] = {9,41}},kls.mapID,icon_earthspirit},
+    [32440] = {tjf.name,"|T"..icon_airspirit..":12|t Air Spirit",25,pffl..pfdr..pfel,{[tjf.mapID] = {29,36},[pa.mapID] = {60,45}, [kls.mapID] = {86,87}},tjf.mapID,icon_airspirit},
 
     -- Pandaria --
-    [31953] = {tjf.name,"Hyuna",25,pffl..pfbe..pfwa,{[tjf.mapID] = {48,54},[pa.mapID] = {69,54},},tjf.mapID,tx_bagicon},
-    [31955] = {vfw.name,"Nishi",25,pfel..pfel..pfbe,{[vfw.mapID] = {46,44},[pa.mapID] = {51,65},},vfw.mapID,tx_bagicon},
-    [31954] = {krw.name,"Mo'ruk",25,pfbe..pffl..pfwa,{[krw.mapID] = {62,45},[pa.mapID] = {56,79},},krw.mapID,tx_bagicon},
-    [31956] = {kls.name,"Yon",25,pffl..pfcr..pfbe,{[kls.mapID] = {36,74},[pa.mapID] = {40,40},},kls.mapID,tx_bagicon},
-    [31991] = {tos.name,"Zusshi",25,pfel..pfcr..pfwa,{[tos.mapID] = {36,52},[pa.mapID] = {24,40},},tos.mapID,tx_bagicon},
-    [31957] = {dws.name,"Shu",25,pfwa..pfel..pfbe,{[dws.mapID] = {55,38},[pa.mapID] = {36,64},},dws.mapID,tx_bagicon},
-    [31958] = {veb.name,"Aki",25,pfcr..pfdr..pfwa,{[veb.mapID] = {31,74},[pa.mapID] = {45,58},[dws.mapID] = {83,20},[vfw.mapID] = {25,15},},veb.mapID,tx_bagicon},
+    [31953] = {tjf.name,"Hyuna",                      25,pffl..pfbe..pfwa,{[tjf.mapID] = {48,54},[pa.mapID] = {69,54},},tjf.mapID,tx_bagicon},
+    [31955] = {vfw.name,"Nishi",                      25,pfel..pfel..pfbe,{[vfw.mapID] = {46,44},[pa.mapID] = {51,65},},vfw.mapID,tx_bagicon},
+    [31954] = {krw.name,"Mo'ruk",                     25,pfbe..pffl..pfwa,{[krw.mapID] = {62,45},[pa.mapID] = {56,79},},krw.mapID,tx_bagicon},
+    [31956] = {kls.name,"Yon",                        25,pffl..pfcr..pfbe,{[kls.mapID] = {36,74},[pa.mapID] = {40,40},},kls.mapID,tx_bagicon},
+    [31991] = {tos.name,"Zusshi",                     25,pfel..pfcr..pfwa,{[tos.mapID] = {36,52},[pa.mapID] = {24,40},},tos.mapID,tx_bagicon},
+    [31957] = {dws.name,"Shu",                        25,pfwa..pfel..pfbe,{[dws.mapID] = {55,38},[pa.mapID] = {36,64},},dws.mapID,tx_bagicon},
+    [31958] = {veb.name,"Aki",                        25,pfcr..pfdr..pfwa,{[veb.mapID] = {31,74},[pa.mapID] = {45,58},[dws.mapID] = {83,20},[vfw.mapID] = {25,15},},veb.mapID,tx_bagicon},
 
     -- Outlands --
-    [31922] = {hfp.name,"Nicky Tinytech",20,pfme..pfme..pfme,{[hfp.mapID] = {64,49},[ol.mapID] = {62,52}},hfp.mapID}, -- nicky
-    [31923] = {zng.name,"Ras'an",21,pffl..pfhu..pfma,{[zng.mapID] = {17,50},[ol.mapID] = {25,48}},zng.mapID}, -- ras'an
-    [31924] = {ona.name,"Narrok",22,pfwa..pfcr..pfbe,{[ona.mapID] = {61,49},[ol.mapID] = {35,65}},ona.mapID}, -- narrok
-    [31925] = {ter.name,"Morulu The Elder",23,pfwa..pfwa..pfwa,{[ter.mapID] = {59,70},[sha.mapID] = {32,30},[ol.mapID] = {44,68}},ter.mapID}, -- morulu
-    [31926] = {osm.name,"Grand Master Antari",24,pfma..pfel..pfdr,{[osm.mapID] = {31,42},[ol.mapID] = {60,79}},osm.mapID,tx_bagicon},
+    [31922] = {hfp.name,"Nicky Tinytech",             20,pfme..pfme..pfme,{[hfp.mapID] = {64,49},[ol.mapID] = {62,52}},hfp.mapID}, -- nicky
+    [31923] = {zng.name,"Ras'an",                     21,pffl..pfhu..pfma,{[zng.mapID] = {17,50},[ol.mapID] = {25,48}},zng.mapID}, -- ras'an
+    [31924] = {ona.name,"Narrok",                     22,pfwa..pfcr..pfbe,{[ona.mapID] = {61,49},[ol.mapID] = {35,65}},ona.mapID}, -- narrok
+    [31925] = {ter.name,"Morulu The Elder",           23,pfwa..pfwa..pfwa,{[ter.mapID] = {59,70},[sha.mapID] = {32,30},[ol.mapID] = {44,68}},ter.mapID}, -- morulu
+    [31926] = {osm.name,"Grand Master Antari",        24,pfma..pfel..pfdr,{[osm.mapID] = {31,42},[ol.mapID] = {60,79}},osm.mapID,tx_bagicon},
 
     -- Northrend --
-    [31931] = {hfj.name,"Beegle Blastfuse",25,pffl..pfwa..pffl,{[hfj.mapID] = {29,34},[nr.mapID] = {69,75},},hfj.mapID}, -- beegle
-    [31933] = {dbi.name,"Okrut Dragonwaste",25,pfdr..pfun..pfun,{[dbi.mapID] = {59,77},[nr.mapID] = {50,67},},dbi.mapID}, -- okrut
-    [31934] = {zdr.name,"Gutretch",25,pfbe..pfbe..pfcr,{[zdr.mapID] = {13,67},[nr.mapID] = {59,44},},zdr.mapID}, -- gutretch
-    [31932] = {csf.name,"Nearly Headless Jacob",25,pfun..pfun..pfun,{[csf.mapID] = {50,59},[nr.mapID] = {51,44},},csf.mapID}, -- headless
-    [31935] = {icc.name,"Grand Master Payne",25,pfbe..pfme..pfel, {[icc.mapID] = {77,20},[nr.mapID] = {49,17},},icc.mapID,tx_bagicon},
+    [31931] = {hfj.name,"Beegle Blastfuse",           25,pffl..pfwa..pffl,{[hfj.mapID] = {29,34},[nr.mapID] = {69,75},},hfj.mapID}, -- beegle
+    [31933] = {dbi.name,"Okrut Dragonwaste",          25,pfdr..pfun..pfun,{[dbi.mapID] = {59,77},[nr.mapID] = {50,67},},dbi.mapID}, -- okrut
+    [31934] = {zdr.name,"Gutretch",                   25,pfbe..pfbe..pfcr,{[zdr.mapID] = {13,67},[nr.mapID] = {59,44},},zdr.mapID}, -- gutretch
+    [31932] = {csf.name,"Nearly Headless Jacob",      25,pfun..pfun..pfun,{[csf.mapID] = {50,59},[nr.mapID] = {51,44},},csf.mapID}, -- headless
+    [31935] = {icc.name,"Grand Master Payne",         25,pfbe..pfme..pfel, {[icc.mapID] = {77,20},[nr.mapID] = {49,17},},icc.mapID,tx_bagicon},
 
     -- Cataclysm --
-    [31972] = {hyj.name,"Brok",25,pfma..pfbe..pfcr,{[hyj.mapID] = {61,33},[fel.mapID] = {87,48},[wsp.mapID] = {41,85},[ka.mapID] = {56,31},},hyj.mapID}, -- brok
-    [31973] = {dee.name,"Bordin Steadyfist",25,pfel..pfcr..pfel,{[dee.mapID] = {50,57},[tma.mapID] = {50,36},},dee.mapID}, -- bordin
-    [31971] = {uld.name,"Grand Master Obalis",25,pfbe..pffl..pfcr,{[uld.mapID] = {57,42},[ka.mapID] = {49,92},},uld.mapID,tx_bagicon},
-    [31974] = {twh.name,"Goz Banefury",25,pfel..pfma..pfbe,{[twh.mapID] = {57,57},[ek.mapID] = {58,57},},twh.mapID}, -- goz
+    [31972] = {hyj.name,"Brok",                       25,pfma..pfbe..pfcr,{[hyj.mapID] = {61,33},[fel.mapID] = {87,48},[wsp.mapID] = {41,85},[ka.mapID] = {56,31},},hyj.mapID}, -- brok
+    [31973] = {dee.name,"Bordin Steadyfist",          25,pfel..pfcr..pfel,{[dee.mapID] = {50,57},[tma.mapID] = {50,36},},dee.mapID}, -- bordin
+    [31971] = {uld.name,"Grand Master Obalis",        25,pfbe..pffl..pfcr,{[uld.mapID] = {57,42},[ka.mapID] = {49,92},},uld.mapID,tx_bagicon},
+    [31974] = {twh.name,"Goz Banefury",               25,pfel..pfma..pfbe,{[twh.mapID] = {57,57},[ek.mapID] = {58,57},},twh.mapID}, -- goz
 
     -- -- Kalimdor --
-    [31818] = {dur.name,"Zunta",2,pfbe..pfcr,{[dur.mapID] = {44,28},[ka.mapID] = {58,49},[nob.mapID] = {78,27}},dur.mapID,nil,"Horde"}, -- zunta
-    [31819] = {nob.name,"Dagra the Fierce",3,pfbe..pfbe..pfcr,{[nob.mapID] = {58,53},[ka.mapID] = {55,53},[dur.mapID] = {23,58},[sob.mapID] = {61,9}},nob.mapID,nil,"Horde"}, -- dagra
-    [31909] = {wsp.name,"Grand Master Trixxy",19,pfdr..pfbe..pffl,{[wsp.mapID] = {66,65},[ka.mapID] = {60,27},},wsp.mapID,tx_bagicon}, -- trixxy
-    [31904] = {sob.name,"Cassandra Kaboom",11,pfme..pfme..pfme,{[sob.mapID] = {39,79},[ka.mapID] = {51,67},[mul.mapID] = {69,98},[dwm.mapID] = {11,48}},sob.mapID,nil,"Horde"}, -- cassandra
-    [31854] = {asv.name,"Analynn",5,pfwa..pfcr..pffl,{[asv.mapID] = {20,29},[ka.mapID] = {45,38},[fel.mapID] = {21,91}},asv.mapID,nil,"Horde"}, -- analynn
-    [31906] = {thn.name,"Kela Grimtotem",15,pfbe..pfcr..pfcr,{[thn.mapID] = {32,33},[ka.mapID] = {51,72},[dwm.mapID] = {16,83}},thn.mapID,nil,"Horde"}, -- kela
-    [31862] = {stm.name,"Zonya the Sadist",7,pfbe..pfbe..pfcr,{[81] = {59,71},[ka.mapID] = {45,50},},81,nil,"Horde"}, -- zonya
-    [31872] = {des.name,"Merda Stronghoof",9,pfwa..pfcr..pfel,{[des.mapID] = {57,45},[ka.mapID] = {42,56},[mul.mapID] = {10,21}},des.mapID,nil,"Horde"}, -- merda
-    [31905] = {dwm.name,"Grazzle the Great",14,pfdr..pfdr..pfdr,{[dwm.mapID] = {53,74},[ka.mapID] = {57,71},[thn.mapID] = {77,24}},dwm.mapID,nil,"Horde"},
-    [31871] = {fer.name,"Traitor Gluk",13,pfbe..pfcr..pfdr,{[fer.mapID] = {60,50},[ka.mapID] = {43,72},},fer.mapID,nil,"Horde"}, -- traitor
-    [31907] = {fel.name,"Zoltan",16,pfma..pfma..pfme,{[fel.mapID] = {40,56},[ka.mapID] = {48,31},[dks.mapID] = {56,75},},fel.mapID,nil,"Horde"}, -- zoltan
-    [31908] = {moo.name,"Elena Flutterfly",17,pfdr..pffl..pfma,{[moo.mapID] = {46,60},[ka.mapID] = {53,21},[dks.mapID] = {84,15},},moo.mapID,nil,"Horde"}, -- elena
+    [31819] = {nob.name,"Dagra the Fierce",            3,pfbe..pfbe..pfcr,{[nob.mapID] = {58,53},[ka.mapID] = {55,53},[dur.mapID] = {23,58},[sob.mapID] = {61,9}},nob.mapID,nil,"Horde"}, -- dagra
+    [31904] = {sob.name,"Cassandra Kaboom",           11,pfme..pfme..pfme,{[sob.mapID] = {39,79},[ka.mapID] = {51,67},[mul.mapID] = {69,98},[dwm.mapID] = {11,48}},sob.mapID,nil,"Horde"}, -- cassandra
+    [31909] = {wsp.name,"Grand Master Trixxy",        19,pfdr..pfbe..pffl,{[wsp.mapID] = {66,65},[ka.mapID] = {60,27},},                      wsp.mapID,tx_bagicon}, -- trixxy
+    [31818] = {dur.name,"Zunta",                       2,pfbe..pfcr,      {[dur.mapID] = {44,28},[ka.mapID] = {58,49},[nob.mapID] = {78,27}}, dur.mapID,nil,"Horde"}, -- zunta
+    [31854] = {asv.name,"Analynn",                     5,pfwa..pfcr..pffl,{[asv.mapID] = {20,29},[ka.mapID] = {45,38},[fel.mapID] = {21,91}}, asv.mapID,nil,"Horde"}, -- analynn
+    [31906] = {thn.name,"Kela Grimtotem",             15,pfbe..pfcr..pfcr,{[thn.mapID] = {32,33},[ka.mapID] = {51,72},[dwm.mapID] = {16,83}}, thn.mapID,nil,"Horde"}, -- kela
+    [31862] = {stm.name,"Zonya the Sadist",            7,pfbe..pfbe..pfcr,{[stm.mapID] = {59,71},[ka.mapID] = {45,50},},                      stm.mapID,nil,"Horde"}, -- zonya
+    [31872] = {des.name,"Merda Stronghoof",            9,pfwa..pfcr..pfel,{[des.mapID] = {57,45},[ka.mapID] = {42,56},[mul.mapID] = {10,21}}, des.mapID,nil,"Horde"}, -- merda
+    [31905] = {dwm.name,"Grazzle the Great",          14,pfdr..pfdr..pfdr,{[dwm.mapID] = {53,74},[ka.mapID] = {57,71},[thn.mapID] = {77,24}}, dwm.mapID,nil,"Horde"},
+    [31871] = {fer.name,"Traitor Gluk",               13,pfbe..pfcr..pfdr,{[fer.mapID] = {60,50},[ka.mapID] = {43,72},},                      fer.mapID,nil,"Horde"}, -- traitor
+    [31907] = {fel.name,"Zoltan",                     16,pfma..pfma..pfme,{[fel.mapID] = {40,56},[ka.mapID] = {48,31},[dks.mapID] = {56,75},},fel.mapID,nil,"Horde"}, -- zoltan
+    [31908] = {moo.name,"Elena Flutterfly",           17,pfdr..pffl..pfma,{[moo.mapID] = {46,60},[ka.mapID] = {53,21},[dks.mapID] = {84,15},},moo.mapID,nil,"Horde"}, -- elena
 
     -- Eastern Kingdoms --
-    [31693] = {C_Map.GetMapInfo(30).name ,"Julia Stevens",2,pfbe..pfbe,{[30] = {42,84},[ek.mapID] = {44,78},},30,nil,"Alliance"}, -- julia
-    [31914] = {C_Map.GetMapInfo(29).name ,"Durin Darkhammer",17,pffl..pfcr..pfel,{[29] = {25,47},[ek.mapID] = {48,70},},29,nil,"Alliance"}, -- durin
-    [31850] = {C_Map.GetMapInfo(34).name ,"Eric Davidson",7,pfbe..pfbe..pfbe,{[34] = {20,44},[ek.mapID] = {44,80},},34,nil,"Alliance"},
-    [31781] = {C_Map.GetMapInfo(36).name ,"Lindsay",5,pfcr..pfcr..pfcr,{[36] = {33,52},[ek.mapID] = {50,76},},36,nil,"Alliance"}, -- lindsay
-    [31912] = {C_Map.GetMapInfo(28).name ,"Kortas Darkhammer",15,pfdr..pfdr..pfdr,{[28] = {35,27},[ek.mapID] = {47,65},},28,nil,"Alliance"}, -- kortas
-    [31852] = {C_Map.GetMapInfo(37).name ,"Steven Lisbane",9,pfbe..pfbe..pfma,{[37] = {46,40},[689] = {47,26},[ek.mapID] = {45,85},},37,nil,"Alliance"}, -- steven
-    [31851] = {C_Map.GetMapInfo(673).name,"Bill Buckler",11,pfhu..pffl..pffl,{[673] = {51,73},[689] = {44,79},[ek.mapID] = {44,94},},673,nil,"Alliance"}, -- bill
-    [31913] = {C_Map.GetMapInfo(38).name ,"Everessa",16,pffl..pfwa..pfbe,{[38] = {76,41},[ek.mapID] = {54,79},},38,nil,"Alliance"}, -- everessa
-    [31910] = {C_Map.GetMapInfo(26).name ,"David Kosse",13,pfcr..pfbe..pfma,{[26] = {62,54},[ek.mapID] = {54,41},},26,nil,"Alliance"}, -- david
-    [31780] = {C_Map.GetMapInfo(39).name ,"Old MacDonald",3,pfme..pffl..pfcr,{[39] = {61,19},[ek.mapID] = {42,77},},39,nil,"Alliance"}, -- mcdonald
-    [31916] = {C_Map.GetMapInfo(32).name ,"Grand Master Lydia Accoste",19,pfel..pfun..pfun,{[32] = {40,77},[ek.mapID] = {49,82},},32,tx_bagicon},
-    [31911] = {C_Map.GetMapInfo(23).name ,"Deiza Plaguehorn",14,pfbe..pfbe..pfun,{[23] = {67,54},[ek.mapID] = {57,32},},23,nil,"Alliance"}, -- deiza
+    [31693] = {elf.name,"Julia Stevens",               2,pfbe..pfbe,      {[elf.mapID] = {42,84},                      [ek.mapID] = {44,78},},elf.mapID,nil,"Alliance"}, -- julia
+    [31914] = {bus.name,"Durin Darkhammer",           17,pffl..pfcr..pfel,{[bus.mapID] = {25,47},                      [ek.mapID] = {48,70},},bus.mapID,nil,"Alliance"}, -- durin
+    [31850] = {duw.name,"Eric Davidson",               7,pfbe..pfbe..pfbe,{[duw.mapID] = {20,44},                      [ek.mapID] = {44,80},},duw.mapID,nil,"Alliance"}, -- eric
+    [31781] = {rrm.name,"Lindsay",                     5,pfcr..pfcr..pfcr,{[rrm.mapID] = {33,52},                      [ek.mapID] = {50,76},},rrm.mapID,nil,"Alliance"}, -- lindsay
+    [31912] = {seg.name,"Kortas Darkhammer",          15,pfdr..pfdr..pfdr,{[seg.mapID] = {35,27},                      [ek.mapID] = {47,65},},seg.mapID,nil,"Alliance"}, -- kortas
+    [31852] = {nst.name,"Steven Lisbane",              9,pfbe..pfbe..pfma,{[nst.mapID] = {46,40},[stv.mapID] = {47,26},[ek.mapID] = {45,85},},nst.mapID,nil,"Alliance"}, -- steven
+    [31851] = {cos.name,"Bill Buckler",               11,pfhu..pffl..pffl,{[cos.mapID] = {51,73},[stv.mapID] = {44,79},[ek.mapID] = {44,94},},cos.mapID,nil,"Alliance"}, -- bill
+    [31913] = {sos.name,"Everessa",                   16,pffl..pfwa..pfbe,{[sos.mapID] = {76,41},                      [ek.mapID] = {54,79},},sos.mapID,nil,"Alliance"}, -- everessa
+    [31910] = {thl.name,"David Kosse",                13,pfcr..pfbe..pfma,{[thl.mapID] = {62,54},                      [ek.mapID] = {54,41},},thl.mapID,nil,"Alliance"}, -- david
+    [31780] = {wef.name,"Old MacDonald",               3,pfme..pffl..pfcr,{[wef.mapID] = {61,19},                      [ek.mapID] = {42,77},},wef.mapID,nil,"Alliance"}, -- mcdonald
+    [31916] = {dwp.name,"Grand Master Lydia Accoste", 19,pfel..pfun..pfun,{[dwp.mapID] = {40,77},                      [ek.mapID] = {49,82},},dwp.mapID,tx_bagicon},
+    [31911] = {epl.name,"Deiza Plaguehorn",           14,pfbe..pfbe..pfun,{[epl.mapID] = {67,54},                      [ek.mapID] = {57,32},},epl.mapID,nil,"Alliance"}, -- deiza
       
     -- Timeless Isle --
-    [33222] = {tti.name,"Little Tommy",125,pfbe,{[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
-    [33137] = {8410,"Celestial Tournament",25,"",{[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
+    [33222] = {tti.name,"Little Tommy",               25,pfbe,            {[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
+    [33137] = {8410,"Celestial Tournament",           25,"",              {[tti.mapID] = {35,60},[pa.mapID] = {88,71},[tjf.mapID] = {91,94},},tti.mapID,nil},
 
     -- Elite Pets --
      [epspecial..1] = {tjf.name,ep_quest_missing,125,pfcr,{[tjf.mapID] = {48,71},[pa.mapID] = {68,61},},tjf.mapID,ep_icon}, -- Kawi I
